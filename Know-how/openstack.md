@@ -20,8 +20,12 @@ runcmd:
   - systemctl restart ssh
 ```
 # Openstack Command
-## VM 관련
+## VM
 ```bash
 openstack server create --image 'Ubuntu 22.04' --flavor "s1v1m2" --nic net-id="choolee-net" --user-data ~/cloud-init --boot-from-volume 10 choolee-vm
 openstack server add security group choolee-vm choolee-sg
+```
+## Security Group
+```bash
+openstack security group rule create --protocol "tcp" --remote-ip '0.0.0.0/0' --egress choolee-sg
 ```
