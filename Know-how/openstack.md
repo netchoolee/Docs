@@ -24,6 +24,9 @@ runcmd:
 ```bash
 openstack server create --image 'Ubuntu 22.04' --flavor "s1v1m2" --nic net-id="choolee-net" --user-data ~/cloud-init --boot-from-volume 10 choolee-vm
 openstack server add security group choolee-vm choolee-sg
+# VM Cold migration
+openstack server migrate choolee-vm
+nova resize-confirm <vm-id> ## 콜드 마이그레이션 후, VM 상태가 VERIFY_RESIZE로 변경 -> 이를 확인하고 승인
 ```
 ## Security Group
 ```bash
