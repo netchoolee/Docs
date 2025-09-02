@@ -6,7 +6,7 @@
 4. 종료: ^]
 ```
 # cloud-init
-'''bash
+```bash
 #cloud-config
 users:
   - name: root
@@ -18,8 +18,9 @@ runcmd:
   - sed -i 's/#UseLogin.*/UseLogin yes/g' /etc/ssh/sshd_config
   - sed -i 's/#UseDNS.*/UseDNS no/g' /etc/ssh/sshd_config
   - systemctl restart ssh
-
-'''   
+```
+# Openstack Command
 ## VM 생성
+```bash
 openstack server create --image 'Ubuntu 22.04' --flavor "s1v1m2" --nic net-id="choolee-net" --user-data ~/cloud-init --boot-from-volume 10 choolee-vm
-
+```
