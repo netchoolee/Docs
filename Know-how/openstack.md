@@ -20,7 +20,8 @@ runcmd:
   - systemctl restart ssh
 ```
 # Openstack Command
-## VM 생성
+## VM 관련
 ```bash
 openstack server create --image 'Ubuntu 22.04' --flavor "s1v1m2" --nic net-id="choolee-net" --user-data ~/cloud-init --boot-from-volume 10 choolee-vm
+openstack server add security group choolee-vm choolee-sg
 ```
