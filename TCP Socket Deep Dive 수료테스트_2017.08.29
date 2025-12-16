@@ -1,0 +1,46 @@
+1.	Ethernet 장비는 전송되는 Ethernet packet(frame)간 최소의 간격을 지정하고 있다. 이를 interpacket gap(IPG) 또는 interframe gap(IFG)이라고 하는데, 이를 Byte로 환산하면 몇 Byte 인가?
+1)	8 Byte         2) 12 Byte        3) 16 Byte       4) 20 Byte
+2.	Server 프로그램에서 Socket을 활성화 하는 순서로 올바른 것은?
+1) socket생성 – bind – listen – accept         2) socket생성 – listen – bind – accept
+3) listen – bind – socket생성 – accept         4) bind - socket생성 – accept - listen
+3.	Session Status에서 Established 상태에서 “FIN”을 전송하고 상대방에게 ACK을 받게 되면 바뀌는 상태는?
+1)	FIN_WAIT_1    2) FIN_WAIT_2    3) CLOSE_WAIT    4) TIME_WAIT
+4.	Session Status에서 Established 상태에서 “FIN”을 수신하고 상대방에게 ACK을 전송하게 되면 바뀌는 상태는? 
+1)	FIN_WAIT_1    2) FIN_WAIT_2    3) CLOSE_WAIT    4) TIME_WAIT
+5.	Client(10.10.10.10/24)에서 Down 되어있는 Server(10.10.20.10/24)로 연결을 시도할 경우, Connection Fail이 발생할 때까지 걸리는 시간은? 
+단, Windows 기준으로 TcpInitialRTT=3초, MaxSynRetransmissions = 2로 가정
+1) 6초            2) 12초            3) 18초           4) 21초
+6.	RST이 발생하는 원인 중 잘못된 것은?
+1) Listen하지 않는 Port 로 SYN을 수신하는 경우        
+2) 연결되지 않은 Session으로 데이터를 수신하는 경우
+3) 잘못된 SEQ or ACK번호를 수신하는 경우
+4) TCP 소프트웨어가 정상적으로 종료되는 경우
+7.	Nagle Algorithm을 Disable하기 위한 Socket option 항목은?
+1) TcpAckFrequency   2) TcpDelAckTicks    3) TCP_NODELAY    4) l_linger
+8.	Session이 처음 연결(ESTABLISHED) 될 때까지의 Packet 순서는?
+1) SYN - SYN+ACK – ACK        2) ACK – SYN+ACK – SYN 
+3) FIN – ACK – FIN – ACK        4) ACK – FIN – FIN – ACK
+9.	Session이 종료 될 때까지의 Packet 순서는?
+1) SYN - SYN+ACK – ACK        2) ACK – SYN+ACK – SYN 
+3) FIN – ACK – FIN – ACK        4) ACK – FIN – FIN – ACK
+10.	Header와 CRC을 포함한 Ethernet Frame의 MTU(Maximum Transmission Unit) 사이즈는?
+1)	1460 Byte     2) 1480 Byte    3) 1500 Byte     4) 1518 Byte 
+11.	최소 Ethernet Frame 사이즈는?
+1)	62 Byte       2) 63 Byte       3) 64 Byte      4) 65 Byte
+12.	Session Status에서 Established 상태에서 “FIN”을 전송하고 상대방에게 ACK을 받기 전의 상태는?
+1) FIN_WAIT_1    2) FIN_WAIT_2    3) CLOSE_WAIT    4) TIME_WAIT
+13.	Session Status에서 Established 상태에서 “FIN”을 전송하고 상대방에게 ACK을 수신한 후, 다시 상대방의 FIN을 수신하고 ACK을 송신한 이후의 상태는?
+1) FIN_WAIT_1    2) FIN_WAIT_2    3) CLOSE_WAIT    4) TIME_WAIT
+14.	요청에 대한 응답(ACK)과 관련 있는 TCP parameter는? (Window 기준)
+1) TcpMaxDataRetransmissions   2) TcpDelAckTicks    
+3) TcpTimedWaitDelay           4) TcpFinWait2Delay
+15.	100Mbps 대역폭에서 64byte frame 기준으로 최대 PPS(Packet per second)는? 
+1) 148Kpps    2) 248Kpps    3) 348Kpps    4) 448Kpps
+16.	Seq=100, Ack=30, Win=200, Len=20인 packet 전송 후, 응답 packet의 Ack 번호는? 
+1) 120        2) 50         3) 220         4) 40
+17.	Option이 없는 TCP Header의 크기는? 
+1) 10         2) 20         3) 30          4) 40
+18.	TCP Header중 TCP flag의 종류가 아닌 것은? 
+1) ACK         2) RST         3) FIN          4) SEQ
+19.	Client 프로그램에서 서버로 연결하기 위해 사용하는 Socket 함수의 이름은? (주관식)
+20.	단말에서 Session의 상태정보를 보여주는 명령어는? (주관식, 옵션 말고 명령어만 기입)
